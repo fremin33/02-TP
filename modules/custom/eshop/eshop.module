@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Contains eshop.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function eshop_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the eshop module.
+    case 'help.page.eshop':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('eshop test') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function eshop_theme() {
+  return [
+    'eshop' => [
+      'render element' => 'children',
+      'variables' => [
+        'allnodesstring' => NULL,
+        'allnodearray' => NULL,
+        'fieldsarray' => NULL
+      ],
+    ],
+  ];
+}

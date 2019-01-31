@@ -1,0 +1,3 @@
+services:
+  ffmodule.service:
+    class: Drupal\ffmodule\Service\FFModuleService

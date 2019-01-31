@@ -1,0 +1,5 @@
+name: 'eshop'
+type: module
+description: 'eshop test'
+core: 8.x
+package: 'Custom'

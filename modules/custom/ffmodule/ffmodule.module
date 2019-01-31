@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * @file
+ * Contains ffmodule.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ffmodule_help($route_name, RouteMatchInterface $route_match)
+{
+    switch ($route_name) {
+        // Main module help for the ffmodule module.
+        case 'help.page.ffmodule':
+            $output = '';
+            $output .= '<h3>' . t('About') . '</h3>';
+            $output .= '<p>' . t('My Awesome Module') . '</p>';
+            return $output;
+
+        default:
+    }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function ffmodule_theme()
+{
+    return [
+        'ffmodule' => [
+            'render element' => 'children',
+            'variables' => [
+                'title' => NULL,
+                'allNodes' => NULL,
+                'allnodearray' => NULL,
+                'fieldsarray' => NULL
+            ],
+        ],
+    ];
+}

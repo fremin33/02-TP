@@ -1,0 +1,32 @@
+
+ffmodule.default_controller_field:
+  path: '/ffmodule/{contentType}/{field}'
+  defaults:
+    _controller: '\Drupal\ffmodule\Controller\FFModuleController::getAllNodesByContentTypeAndField'
+    _title: 'field'
+  requirements:
+    _permission: 'access content'
+
+ffmodule.default_controller_show:
+  path: '/ffmodule/{contentType}'
+  defaults:
+    _controller: '\Drupal\ffmodule\Controller\FFModuleController::getAllNodesByContentType'
+    _title: 'show'
+  requirements:
+    _permission: 'access content'
+
+ffmodule.default_controller_getAll:
+  path: '/ffmodule/all'
+  defaults:
+    _controller: '\Drupal\ffmodule\Controller\FFModuleController::getAllNodes'
+    _title: 'index'
+  requirements:
+    _permission: 'access content'
+
+ffmodule.default_controller_getAllByField:
+  path: '/ffmodule/all/{field}'
+  defaults:
+    _controller: '\Drupal\ffmodule\Controller\FFModuleController::getAllNodesByField'
+    _title: 'index'
+  requirements:
+    _permission: 'access content'

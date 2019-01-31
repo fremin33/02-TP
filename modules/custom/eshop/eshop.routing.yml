@@ -1,0 +1,8 @@
+
+eshop.default_controller_hello:
+  path: '/eshop/hello/{name}'
+  defaults:
+    _controller: '\Drupal\eshop\Controller\DefaultController::hello'
+    _title: 'infoUser'
+  requirements:
+    _permission: 'access content'
